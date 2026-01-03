@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="contenedor">
+    <h1>Formulario de Registro</h1>
+    <h2>En este formulario se deben rellenar los campos como está indicado, sino se pondrán en rojo los campos
+      oblicatorios y los alerts avisarán.</h2>
+
+    <form id="formulario">
+      <div class="campo">
+        <label for="nombre">Nombre completo (campo obligatorio)</label>
+        <input type="text" id="nombre" name="nombre">
+      </div>
+
+      <div class="campo">
+        <label for="email">Correo electrónico (campo obligatorio)</label>
+        <input type="text" id="email" name="email">
+      </div>
+
+      <div class="campo">
+        <label for="telefono">Número de teléfono (opcional)</label>
+        <input type="text" id="telefono" name="telefono">
+      </div>
+
+      <div class="campo">
+        <label for="fecha">Fecha de nacimiento (campo obligatorio)</label>
+        <input type="date" id="fecha" name="fecha">
+      </div>
+
+      <div class="campo">
+        <label>Género (campo obligatorio)</label>
+        <div class="opciones-radio" id="contenedor-genero">
+          <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+          <label><input type="radio" name="genero" value="femenino"> Femenino</label>
+          <label><input type="radio" name="genero" value="otro"> Otro</label>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="pais">País (campo obligatorio)</label>
+        <select id="pais" name="pais">
+          <option value="">Selecciona un país</option>
+          <option value="spain">España</option>
+          <option value="francia">Francia</option>
+          <option value="eeuu">EEUU</option>
+          <option value="rusia">Rusia</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label id="label-terminos" class="checkbox-label">
+          <input type="checkbox" id="terminos" name="terminos">
+          Acepto los términos y condiciones (campo obligatorio)
+        </label>
+      </div>
+
+      <button type="submit" class="boton-enviar">Enviar</button>
+    </form>
+  </div>
+</body>
+
+</html>
