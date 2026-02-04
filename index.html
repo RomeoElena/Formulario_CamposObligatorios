@@ -10,32 +10,41 @@
 </head>
 
 <body>
+  <!-- Contenedor principal del formulario -->
   <div class="contenedor">
     <h1>Formulario de Registro</h1>
     <h2>En este formulario se deben rellenar los campos como está indicado, sino se pondrán en rojo los campos
-      oblicatorios y los alerts avisarán.</h2>
+      obligatorios y los alerts avisarán.</h2>
 
+    <!-- Formulario de registro con validación -->
     <form id="formulario">
+      <!-- Campo: Nombre completo (obligatorio) -->
       <div class="campo">
         <label for="nombre">Nombre completo (campo obligatorio)</label>
         <input type="text" id="nombre" name="nombre">
       </div>
 
+      <!-- Campo: Correo electrónico (obligatorio) -->
       <div class="campo">
         <label for="email">Correo electrónico (campo obligatorio)</label>
-        <input type="text" id="email" name="email">
+        <!-- Cambiado a type="email" para mejor accesibilidad y validación nativa -->
+        <input type="email" id="email" name="email">
       </div>
 
+      <!-- Campo: Teléfono (opcional) -->
       <div class="campo">
         <label for="telefono">Número de teléfono (opcional)</label>
-        <input type="text" id="telefono" name="telefono">
+        <!-- Cambiado a type="tel" para teclado móvil optimizado -->
+        <input type="tel" id="telefono" name="telefono">
       </div>
 
+      <!-- Campo: Fecha de nacimiento (obligatorio) -->
       <div class="campo">
         <label for="fecha">Fecha de nacimiento (campo obligatorio)</label>
         <input type="date" id="fecha" name="fecha">
       </div>
 
+      <!-- Campo: Género con radio buttons (obligatorio) -->
       <div class="campo">
         <label>Género (campo obligatorio)</label>
         <div class="opciones-radio" id="contenedor-genero">
@@ -45,6 +54,7 @@
         </div>
       </div>
 
+      <!-- Campo: País con menú desplegable (obligatorio) -->
       <div class="campo">
         <label for="pais">País (campo obligatorio)</label>
         <select id="pais" name="pais">
@@ -56,6 +66,7 @@
         </select>
       </div>
 
+      <!-- Campo: Aceptación de términos y condiciones (obligatorio) -->
       <div class="campo">
         <label id="label-terminos" class="checkbox-label">
           <input type="checkbox" id="terminos" name="terminos">
@@ -63,10 +74,13 @@
         </label>
       </div>
 
+      <!-- Botón de envío del formulario -->
       <button type="submit" class="boton-enviar">Enviar</button>
     </form>
   </div>
-  <script src="script.js"></script>;
+
+  <!-- Script de validación JavaScript -->
+  <script src="script.js"></script>
 </body>
 
 </html>

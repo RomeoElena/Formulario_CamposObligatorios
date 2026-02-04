@@ -1,9 +1,11 @@
+/* Reset general de márgenes, padding y box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos del body principal */
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: #f9e5f1;
@@ -12,6 +14,7 @@ body {
   padding: 20px;
 }
 
+/* Contenedor principal del formulario */
 .contenedor {
   background: #ffe5b4;
   padding: 30px;
@@ -20,12 +23,15 @@ body {
   max-width: 600px;
 }
 
+/* Título principal */
 h1 {
   color: #d05273;
   font-size: 30px;
   text-align: center;
   margin-bottom: 5px;
 }
+
+/* Subtítulo con instrucciones */
 h2 {
   color: #d05273;
   font-size: 14px;
@@ -33,10 +39,12 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* Contenedor de cada campo del formulario */
 .campo {
   margin-bottom: 5px;
 }
 
+/* Estilos de las etiquetas de los campos */
 label {
   display: block;
   margin-bottom: 8px;
@@ -45,8 +53,10 @@ label {
   font-size: 15px;
 }
 
+/* Estilos de los campos de entrada de texto, email, fecha y select */
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 input[type="date"],
 select {
   width: 100%;
@@ -62,19 +72,23 @@ select {
   border-bottom: 2px solid #d05273;
 }
 
+/* Efecto de foco en los campos de entrada */
 input[type="text"]:focus,
 input[type="email"]:focus,
+input[type="tel"]:focus,
 input[type="date"]:focus,
 select:focus {
   background-color: #f9e5f1;
 }
 
+/* Contenedor de opciones de radio buttons */
 .opciones-radio {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
 
+/* Etiquetas de las opciones de radio */
 .opciones-radio label {
   font-weight: normal;
   display: flex;
@@ -83,12 +97,14 @@ select:focus {
   color: #333;
 }
 
+/* Estilos de los radio buttons */
 input[type="radio"] {
   outline: none !important;
   box-shadow: none !important;
   border: none !important;
 }
 
+/* Etiqueta del checkbox de términos y condiciones */
 .checkbox-label {
   font-weight: normal;
   display: flex;
@@ -97,35 +113,40 @@ input[type="radio"] {
   color: #333;
 }
 
+/* Botón de envío del formulario */
 .boton-enviar {
   width: 100%;
   padding: 12px;
   background-color: #d05273;
   color: white;
-  border: 1px;
+  border: 1px solid #d05273;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
 }
 
+/* Efecto hover del botón de envío */
 .boton-enviar:hover {
   background-color: #f9e5f1;
   color: black;
   box-shadow: 0 0 10px #d05273;
 }
 
+/* Estilo de error para el contenedor de radio buttons */
 .opciones-radio.error {
   border: none !important;
 }
 
+/* Cambiar color de texto a rojo cuando hay error en radio buttons */
 .opciones-radio.error label {
   color: red;
 }
 
-/* Aplicar error sólo a inputs de texto, email, date y select en la caja */
+/* Aplicar borde rojo a campos con error (text, email, tel, date, select) */
 input[type="text"].error,
 input[type="email"].error,
+input[type="tel"].error,
 input[type="date"].error,
 select.error {
   border-color: red !important;
@@ -133,7 +154,7 @@ select.error {
   border-bottom: 2px solid red !important;
 }
 
-/* Checkbox sin caja */
+/* Estilos del checkbox sin caja de error */
 input[type="checkbox"] {
   outline: none !important;
   border: none !important;
@@ -141,12 +162,12 @@ input[type="checkbox"] {
   appearance: auto;
 }
 
-/* Label color rojo */
+/* Cambiar color del label a rojo cuando hay error en términos */
 #label-terminos.error {
   color: red;
 }
 
-/* Aplicar que el checkbox no tenga caja en rojo */
+/* Evitar que el checkbox tenga caja roja cuando hay error */
 input[type="checkbox"].error,
 #label-terminos.error input[type="checkbox"],
 .error input[type="checkbox"] {
@@ -156,6 +177,7 @@ input[type="checkbox"].error,
   background: transparent !important;
 }
 
+/* Media query para dispositivos móviles */
 @media (max-width: 600px) {
   .contenedor {
     padding: 20px;
