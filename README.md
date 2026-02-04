@@ -20,6 +20,10 @@ Desarrollo de una interfaz de usuario para capturar información, validando los 
 - **Confirmación:** Si todos los datos son correctos, se muestra el mensaje: _"Formulario enviado correctamente"_.
 - **Gestión de eventos:** El envío se procesa capturando el evento de formulario para evitar la recarga de página innecesaria.
 
+## Puedes visualizarlo:
+
+https://romeoelena.github.io/Formulario_CamposObligatorios/
+
 ## Estilos y Diseño (CSS):
 
 - **Interfaz Moderna:** Aplicación de márgenes, rellenos (padding) y bordes redondeados.
