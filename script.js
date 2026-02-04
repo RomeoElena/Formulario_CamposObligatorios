@@ -16,7 +16,7 @@ formulario.onsubmit = function (evento) {
   let valido = true;
 
   const campos = document.querySelectorAll(
-    "input:not([type='radio']):not([type='checkbox']), select"
+    "input:not([type='radio']):not([type='checkbox']), select",
   );
   for (let i = 0; i < campos.length; i++) {
     campos[i].classList.remove("error");
